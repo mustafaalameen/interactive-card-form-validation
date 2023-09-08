@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="background-header">
+      <div class="back-div">
+        <img src="./images/bg-card-back.png" alt="" class="back">
+        <p class="card-cvc">000</p>
+      </div>
+      <div class="fore-div">
+        <img src="./images/bg-card-front.png" alt="" class="fore">
+        <img src="./images/card-logo.svg" alt="logo" class="logo">
+        <div class="card-info">
+          <p id="card-info-number">0000 0000 0000 0000</p>
+          <div class="card-dislay-bottom">
+            <p class="display-name">Jane Appleseed</p>
+            <p class="mm/yy"><span id="mm">00</span>/<span id="yy">00</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <form action="" id="form">
+        <div class="input-control">
+          <label for="form-cardholder-name">
+            <h5>Cardholder Name</h5>
+          </label>
+          <input type="text" name="name" id="form-cardholder-name" placeholder="e.g. Jane Appleseed">
+          <small id="nameError" class="error"></small>
+        </div>
+        <div class="input-control">
+          <label for="form-cardholder-number">
+            <h5>Card Number</h5>
+          </label>
+          <input type="text" name="name" id="form-cardholder-number" placeholder="e.g. 1234 5678 9123 0000"
+            maxlength=19>
+          <small id="numberError" class="error "></small>
+        </div>
+        <!-- --------------------------------------------------- -->
+        <div class="form-month-year-cvc input-control">
+          <div class="month_year"><label for="form-month-year" style="display: block;">
+              <h5>Exp. Date (MM/YY)</h5>
+            </label>
+            <span class="month-year-input">
+              <span><input type="number" name="" placeholder="MM" id="form-cardholder-month"><small
+                  id="month-year-error" class="error"></small>
+              </span>
+              <span><input type="number" name="" placeholder="YY" id="form-cardholder-year">
+                <small id="month-year-error" class="error"></small></span>
+            </span>
+          </div>
+
+          <div class="input-control"><label for="form-cvc">
+              <h5>CVC</h5>
+            </label>
+            <input type="number" name="" id="form-cvc" placeholder="e.g. 123">
+            <small id="cvc-error" class="error"></small>
+          </div>
+        </div>
+
+        <button class="btn submit-btn">Confirm</button>
+      </form>
+
+      <div class="complete-state">
+        <div class="mark">
+          <img src="./images/icon-complete.svg" alt="icon-complete">
+        </div>
+        <h3>THANK YOU!</h3>
+        <p>We've added your card details</p>
+        <button class="btn continue-btn">Continue</button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="attribution" style=" display : none">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
